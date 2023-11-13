@@ -1,0 +1,55 @@
+<template>
+    <div class="wrapper">
+        <router-link to="/" class="logo">Home</router-link>
+        <router-link to="/about" class="link">About</router-link>
+    </div>
+</template>
+
+<style scoped>
+.wrapper {
+    padding: 16px 7rem;
+    box-shadow: 5px 5px 12px black;
+}
+
+.logo {
+    font-weight: bolder;
+    color: rgb(54, 120, 182);
+    text-decoration: none;
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 12px;
+    height: 100%;
+    border-bottom: 2px solid rgb(54, 120, 182);
+}
+
+.link:hover {
+    color: rgb(54, 120, 182);
+    border-bottom: 2px solid black;
+    transition: 0.3s all ease-in-out;
+}
+
+/*smaller desktop*/
+@media screen and (max-width: 1150px) {
+    .wrapper {
+        padding: 16px 5rem;
+    }
+}
+
+/*smaller tablet*/
+@media screen and (max-width: 600px) {
+    .wrapper {
+        padding: 16px 3rem;
+    }
+}
+
+/*mobile*/
+@media screen and (max-width: 500px) {
+    .wrapper {
+        padding: 16px 1rem;
+    }
+}
+</style>

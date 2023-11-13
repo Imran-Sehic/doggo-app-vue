@@ -1,0 +1,35 @@
+<template>
+    <button class="button" @click="emit('click')">
+        {{ content }}
+    </button>
+</template>
+
+<script setup lang="ts">
+defineProps<{
+    content: string
+}>();
+const emit = defineEmits<{
+    (e: 'click'): void
+}>()
+</script>
+
+<style scoped>
+.button {
+    border-radius: 5px;
+    background-color: rgb(54, 120, 182);
+    color: white;
+    font-weight: bold;
+    padding: 8px 64px;
+    height: 100%;
+    border: 2px solid rgb(54, 120, 182);
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.button:hover {
+    background-color: rgb(102, 163, 219);
+    border: 2px solid rgb(102, 163, 219);
+    transition: 0.1s all ease-in-out;
+}
+</style>
