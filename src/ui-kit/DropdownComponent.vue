@@ -12,7 +12,6 @@
             </div>
             <div v-if="expanded" class="options" :class="{ closing: closing }">
                 <div v-for="(item, index) in list" :key="index" class="option" @click="async () => {
-                    //emit('update:option', type, item)
                     option = item
                     await setClosingAnimation();
                     expanded = false;
